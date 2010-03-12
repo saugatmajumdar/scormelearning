@@ -1,13 +1,23 @@
 package edu.sdnu.sise.grades.scorm.domain;
 
 import java.sql.Date;
-
+/**
+ * 学生类,对应数据库中的student表
+ * @author chenzmin
+ *
+ */
 public class Student {	
 	private Long id;
 	private String name;
+	/**
+	 * 性别
+	 */
 	private String sexs;
-	private String napla;
-	private Date brith;
+	/**
+	 * 籍贯
+	 */
+	private String nativePlace;
+	private Date birth;
 
 	public Student() {
 
@@ -37,28 +47,28 @@ public class Student {
 	}
 
 	public String getNapla() {
-		return napla;
+		return nativePlace;
 	}
 
 	public void setNapla(String napla) {
-		this.napla = napla;
+		this.nativePlace = napla;
 	}
 
 	public Date getBrith() {
-		return brith;
+		return birth;
 	}
 
 	public void setBrith(Date brith) {
-		this.brith = brith;
+		this.birth = brith;
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((brith == null) ? 0 : brith.hashCode());
+		result = prime * result + ((birth == null) ? 0 : birth.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((napla == null) ? 0 : napla.hashCode());
+		result = prime * result + ((nativePlace == null) ? 0 : nativePlace.hashCode());
 		result = prime * result + ((sexs == null) ? 0 : sexs.hashCode());
 		return result;
 	}
@@ -71,10 +81,10 @@ public class Student {
 		if (getClass() != obj.getClass())
 			return false;
 		Student other = (Student) obj;
-		if (brith == null) {
-			if (other.brith != null)
+		if (birth == null) {
+			if (other.birth != null)
 				return false;
-		} else if (!brith.equals(other.brith))
+		} else if (!birth.equals(other.birth))
 			return false;
 		if (id == null) {
 			if (other.id != null)
@@ -86,10 +96,10 @@ public class Student {
 				return false;
 		} else if (!name.equals(other.name))
 			return false;
-		if (napla == null) {
-			if (other.napla != null)
+		if (nativePlace == null) {
+			if (other.nativePlace != null)
 				return false;
-		} else if (!napla.equals(other.napla))
+		} else if (!nativePlace.equals(other.nativePlace))
 			return false;
 		if (sexs == null) {
 			if (other.sexs != null)
@@ -100,8 +110,8 @@ public class Student {
 	}
 	@Override
 	public String toString() {
-		return "Student [brith=" + brith + ", id=" + id + ", name=" + name
-				+ ", napla=" + napla + ", sexs=" + sexs + "]";
+		return "Student [brith=" + birth + ", id=" + id + ", name=" + name
+				+ ", napla=" + nativePlace + ", sexs=" + sexs + "]";
 	}
 
 
