@@ -1,7 +1,8 @@
 package edu.sdnu.sise.grades.scorm.domain;
+
 /**
- * Account table
- *
+ *登录帐号,对于数据库中的account表,用于验证登录页面中用户的输入
+ * 
  */
 public class Account {
 
